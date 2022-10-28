@@ -1,1 +1,1 @@
-speed = 6;
+speed = 10;
