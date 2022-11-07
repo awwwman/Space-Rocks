@@ -1,8 +1,8 @@
 var move_speed = 4;
 var move_accel = 7;
 var fire_rate = 0.2;
-var fire_spread = 15;
-var fire_amount = 3;
+var fire_spread = 0;
+var fire_amount = 1;
 var dash_rate = 0.5;
 
 // turning
@@ -35,10 +35,18 @@ if (keyboard_check(vk_shift)) {
 	}
 }
 
+if (instance_find(obj_game, 0).powered_up == true) {
+	fire_spread = 15;
+	fire_amount = 3;
+} else {
+	fire_spread = 0;
+	fire_amount = 1;
+}
+
 move_wrap(true, true, sprite_width/2);
 
 // attacking
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check(vk_space)) {
 	if (can_fire == true) {	
 		for (var i = 0; i < fire_amount; i += 1) {
 			var bullet_instance = instance_create_layer(x, y, "Instances", obj_bullet);	

@@ -16,7 +16,7 @@ switch(room) {
 		Space: Shoot
 		Shift: Dash
 		
-		>> Press ENTER to start"
+		>> Press SPACE to start"
 		);
 		draw_set_halign(fa_left);
 		break;
@@ -25,7 +25,9 @@ switch(room) {
 		var c = c_red;
 		draw_text_transformed_color(room_width/2, 100, "GAME OVER!", 3, 3, 0, c, c, c, c, 1);
 		draw_text(room_width/2, 200, "Your score was:");
-		draw_text(room_width/2, 300, string(score));
+		c = c_white
+		draw_text_transformed_color(room_width/2, 250, string(score), 2, 2, 0, c, c, c, c, 1);
+		draw_text(room_width/2, 350, "Press SPACE to restart");
 		draw_set_halign(fa_left);
 		break;
 }
