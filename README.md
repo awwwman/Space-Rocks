@@ -3,11 +3,11 @@
 > I followed this particular series of tutorials (PT. 1): https://www.youtube.com/watch?v=VIc8Kon5PFw
 
 ## what i did:
-[x] completed part 1
-[x] completed part 2
-[x] completed part 3
-[x] completed part 4
-[x] completed part 5 (minus the sound effects)
+- [x] completed part 1
+- [x] completed part 2
+- [x] completed part 3
+- [x] completed part 4
+- [x] completed part 5 (minus the sound effects)
 
 ## what i did on my own:
 * i changed the sprites and took a different art direction from the tutorial
