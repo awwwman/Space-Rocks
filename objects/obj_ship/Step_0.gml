@@ -4,6 +4,8 @@ var fire_rate = 0.2;
 var fire_spread = 0;
 var fire_amount = 1;
 var dash_rate = 0.5;
+var dash_speed = 90;
+var trail_rate = 10;
 
 // turning
 if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
@@ -28,10 +30,22 @@ if (keyboard_check(vk_shift)) {
 	// dash either way if the user is not holding down anything
 	dir = dir != 0 ? dir : 1
 	if (can_dash == true) {
-		x += lengthdir_x(90 * dir, image_angle);
-		y += lengthdir_y(90 * dir, image_angle);
 		can_dash = false;
+		var goal_x = lengthdir_x(dash_speed * dir, image_angle);
+		var goal_y = lengthdir_y(dash_speed * dir, image_angle);
 		alarm[1] = 60 * dash_rate;
+		for (var i = 0; i < dash_speed; i += trail_rate) {
+			var step_position_x = lerp(x, x + goal_x, (i)/dash_speed);
+			var step_position_y = lerp(y, y + goal_y, (i)/dash_speed);
+			var trail_instance = instance_create_layer(step_position_x, step_position_y, "Instances", obj_ship_trail);	
+			trail_instance.image_angle = image_angle;
+			trail_instance.alarm[0] = i/trail_rate;
+			if (i == 0) {
+				trail_instance.fading = true;	
+			}
+		}
+		x += goal_x;
+		y += goal_y;
 	}
 }
 
