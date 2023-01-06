@@ -1,7 +1,7 @@
 var powerup_score = 500;
 var powerup_duration = 5;
 
-if (keyboard_check(vk_space)) {
+if (keyboard_check(vk_enter)) {
 	switch (room) {
 		case rm_start:
 			room_goto(rm_space);

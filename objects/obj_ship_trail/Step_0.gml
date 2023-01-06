@@ -1,4 +1,4 @@
-if (!fading) {
+ if (!fading) {
 	return;	
 }
 image_alpha -= 1/15;
