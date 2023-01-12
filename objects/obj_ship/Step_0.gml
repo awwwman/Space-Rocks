@@ -74,7 +74,13 @@ if (keyboard_check(vk_space)) {
 	}
 }
 
+// hacky visuals
 image_xscale = 1 + image_punch;
 image_yscale = 1 + image_punch;
-image_alpha = lerp(image_alpha, immunity ? 0.6 : 1, 0.2);
+image_alpha = lerp(image_alpha, clamp(sin(alpha), 0.2, 1), 0.2);
 image_punch = lerp(image_punch, 0, 0.2);
+if (immunity) {
+	alpha = (alpha + 1/5) % pi;
+} else {
+	alpha = pi/2;	
+}
