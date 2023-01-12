@@ -1,10 +1,10 @@
 alarm[0] = 60 * max(irandom_range(spawn_cooldown_min, spawn_cooldown_max) - score/1000, 0.2); 
 var needed_amount = 1;
-if (instance_count >= 24) {
+if (instance_count >= to_spawn) {
 	return;	
 } 
-else if (instance_count < 4) {
-	needed_amount = 11;
+else if (instance_count < to_spawn) {
+	needed_amount = to_spawn - instance_count;
 }
 
 for (var i = 0; i < needed_amount; i += 1) {

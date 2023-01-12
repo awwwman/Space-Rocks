@@ -76,4 +76,5 @@ if (keyboard_check(vk_space)) {
 
 image_xscale = 1 + image_punch;
 image_yscale = 1 + image_punch;
+image_alpha = lerp(image_alpha, immunity ? 0.6 : 1, 0.2);
 image_punch = lerp(image_punch, 0, 0.2);
