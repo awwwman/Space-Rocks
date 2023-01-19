@@ -2,6 +2,8 @@
 
 global.cameraX = 0;
 global.cameraY = 0;
+global.cameraOffsetX = 0;
+global.cameraOffsetY = 0;
 target = obj_ship;
 
 global.cameraWidth = 500;

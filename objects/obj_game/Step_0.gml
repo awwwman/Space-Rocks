@@ -18,6 +18,18 @@ if ((last_score + powerup_score) < score) {
 	powered_up = true;
 }
 
-if (room == rm_space && lives <= 0) {
-	room_goto(rm_gameover);	
+if (room == rm_space) {
+	if (lives <= 0) {
+		if (timeout >= delay) {
+			room_goto(rm_gameover);
+			timeout = 0;
+		} else {
+			timeout += 1;
+		}
+	}
+	if ((last_score + powerup_score) < score) {
+		last_score = score;
+		alarm[0] = 60 * powerup_duration;
+		powered_up = true;
+	}
 }
