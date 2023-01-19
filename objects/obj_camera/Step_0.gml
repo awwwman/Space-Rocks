@@ -7,3 +7,10 @@ if (instance_exists(target)) {
 }
 
 camera_set_view_pos(view_camera[0], global.cameraX, global.cameraY);
+
+if (room == rm_space) {
+	for (var i = 0; i < 3; i += 1) {
+		layer_x("Parallax_" + string(i), global.cameraX * (1 - (i+0.3)/3));
+		layer_y("Parallax_" + string(i), global.cameraY * (1 - (i+0.3)/3));
+	}
+}
