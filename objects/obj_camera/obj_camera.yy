@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_camera",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_camera_icon",
+    "path": "sprites/spr_camera_icon/spr_camera_icon.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

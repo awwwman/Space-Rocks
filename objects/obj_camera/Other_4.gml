@@ -24,4 +24,5 @@ alarm[0] = 1;
 
 display_set_gui_size(global.cameraWidth, global.cameraHeight);
 
+sprite_delete(spr_camera_icon);
 

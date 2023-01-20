@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_game",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_game_icon",
+    "path": "sprites/spr_game_icon/spr_game_icon.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

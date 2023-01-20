@@ -1,4 +1,4 @@
-/// @description Damage event
+/// @description Take Damage
 
 if (immunity) {
 	return;
@@ -17,10 +17,6 @@ if (lives <= 0) {
 
 repeat(5) {
 	instance_create_layer(x, y, "Instances", obj_debris);	
-}
-
-with(other) {
-	instance_destroy();	
 }
 
 global.cameraOffsetX = random_range(-25, 25);
