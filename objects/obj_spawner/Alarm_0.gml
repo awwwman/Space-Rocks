@@ -7,4 +7,7 @@ else if (instance_count < to_spawn) {
 	needed_amount = to_spawn - instance_count;
 }
 
-spawn_off_camera(obj_asteroid, needed_amount);
+spawn_off_camera(obj_asteroid, floor(needed_amount * 0.5));
+spawn_off_camera(obj_enemy_0, floor(needed_amount * 0.2));
+spawn_off_camera(obj_enemy_1, floor(needed_amount * 0.2));
+spawn_off_camera(obj_enemy_2, floor(needed_amount * 0.1));

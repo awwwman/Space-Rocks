@@ -1,2 +1,4 @@
 event_inherited();
-bulletSpeed = 10;
+
+HP = 2;
+speed = 5;

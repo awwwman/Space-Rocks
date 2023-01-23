@@ -12,7 +12,7 @@ function create_bullet(dir, spd = 5, fac = Factions.CHAOTIC_NEUTRAL, snd = snd_z
 			inst.image_blend = c_aqua;
 			break;
 		case Factions.ENEMY:
-			inst.image_blend = c_orange;
+			inst.image_blend = c_red;
 			break;
 	}
 }

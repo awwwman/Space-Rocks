@@ -1,1 +1,1 @@
-faction = Factions.CHAOTIC_NEUTRAL;
+faction = Factions.ENEMY;
