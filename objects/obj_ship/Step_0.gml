@@ -63,11 +63,8 @@ move_wrap(true, true, sprite_width/2);
 if (keyboard_check(vk_space)) {
 	if (can_fire == true) {	
 		for (var i = 0; i < fire_amount; i += 1) {
-			var bullet_instance = instance_create_layer(x, y, "Instances", obj_bullet);	
-			bullet_instance.creator = self;
-			bullet_instance.faction = faction;
-			bullet_instance.direction = image_angle + i * fire_spread - fire_spread;
-			bullet_instance.image_angle = bullet_instance.direction + 90;	
+			var fireDirection = (i * fire_spread) + image_angle - fire_spread;
+			create_bullet(fireDirection, bulletSpeed, faction);
 		}
 		image_punch = 0.5;
 		can_fire = false;

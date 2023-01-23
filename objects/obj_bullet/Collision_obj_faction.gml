@@ -1,5 +1,5 @@
 
-if (other == creator) exit;
+if (other.id == creator) exit;
 
 instance_destroy();
 
