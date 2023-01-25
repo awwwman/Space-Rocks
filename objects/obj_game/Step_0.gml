@@ -1,5 +1,4 @@
-var powerup_score = 500;
-var powerup_duration = 5;
+
 
 if (keyboard_check(vk_enter)) {
 	switch (room) {
@@ -16,6 +15,7 @@ if ((last_score + powerup_score) < score) {
 	last_score = score
 	alarm[0] = 60 * powerup_duration;
 	powered_up = true;
+	lives = 3;
 }
 
 if (room == rm_space) {

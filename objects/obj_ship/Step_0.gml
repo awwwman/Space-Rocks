@@ -38,6 +38,7 @@ if (keyboard_check(vk_shift)) {
 			var step_position_x = lerp(x, x + goal_x, (i)/dash_speed);
 			var step_position_y = lerp(y, y + goal_y, (i)/dash_speed);
 			var trail_instance = instance_create_layer(step_position_x, step_position_y, "Instances", obj_ship_trail);	
+			trail_instance.faction = self.faction;
 			trail_instance.image_angle = image_angle;
 			trail_instance.alarm[0] = i/trail_rate;
 			if (i == 0) {
