@@ -70,7 +70,6 @@ if (keyboard_check(vk_space)) {
 		image_punch = 0.5;
 		can_fire = false;
 		alarm[0] = 60 * fire_rate;
-		audio_play_sound(snd_zap, 1, false);
 	}
 }
 
