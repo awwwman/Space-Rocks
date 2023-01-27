@@ -24,9 +24,9 @@ else if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
 	dir = -1
 }
 // the movement might be different among different framerates
-motion_set(image_angle, lerp(speed, (dir * move_speed), move_accel/100));	
+motion_set(image_angle, lerp(speed, (dir * move_speed), move_accel/100));
 
-if (keyboard_check(vk_shift)) {
+if (keyboard_check(vk_shift) and !immunity) {
 	// dash either way if the user is not holding down anything
 	dir = dir != 0 ? dir : 1
 	if (can_dash == true) {
@@ -61,7 +61,7 @@ if (instance_find(obj_game, 0).powered_up == true) {
 move_wrap(true, true, sprite_width/2);
 
 // attacking
-if (keyboard_check(vk_space)) {
+if (keyboard_check(vk_space) and !immunity) {
 	if (can_fire == true) {	
 		for (var i = 0; i < fire_amount; i += 1) {
 			var fireDirection = (i * fire_spread) + image_angle - fire_spread;

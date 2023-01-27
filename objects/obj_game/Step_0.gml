@@ -11,13 +11,6 @@ if (keyboard_check(vk_enter)) {
 	}
 }
 
-if ((last_score + powerup_score) < score) {
-	last_score = score
-	alarm[0] = 60 * powerup_duration;
-	powered_up = true;
-	lives = 3;
-}
-
 if (room == rm_space) {
 	if (lives <= 0) {
 		if (timeout >= delay) {
@@ -27,9 +20,9 @@ if (room == rm_space) {
 			timeout += 1;
 		}
 	}
-	if ((last_score + powerup_score) < score) {
-		last_score = score;
-		alarm[0] = 60 * powerup_duration;
-		powered_up = true;
-	}
+	//if ((last_score + powerup_score) < score) {
+	//	last_score = score;
+	//	alarm[0] = 60 * powerup_duration;
+	//	powered_up = true;
+	//}
 }

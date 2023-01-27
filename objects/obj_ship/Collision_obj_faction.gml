@@ -1,6 +1,6 @@
 if (other == self) exit;
 
-if (other.faction == faction) exit;
+if (other.faction == faction) || immunity exit;
 
 with(other) {
 	if faction == Factions.CHAOTIC_NEUTRAL {

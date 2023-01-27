@@ -3,10 +3,11 @@ event_inherited();
 if(!instance_exists(obj_ship)) exit;
 
 if (point_distance(x, y, obj_ship.x, obj_ship.y) < 150 && (point_distance(x, y, obj_ship.x, obj_ship.y) > 90)) {
-	if bulletCounter < 80 {
-		bulletCounter += 1;
+	bulletCounter = 0;
+	if boomCounter < 80 {
+		boomCounter += 1;
 	} else {
-		bulletCounter = 0;
+		boomCounter = 0;
 		turnCounter = (turnCounter + 1) % turnPieces;
 		for (var i = 0; i < turnPieces; i += 1) {
 			var fireDirection = (i * (360/turnPieces)) + (image_angle - (360/turnPieces) * turnCounter);
@@ -14,6 +15,7 @@ if (point_distance(x, y, obj_ship.x, obj_ship.y) < 150 && (point_distance(x, y, 
 		}
 	}	
 } else if (point_distance(x, y, obj_ship.x, obj_ship.y) < 90) {
+	boomCounter = 0;
 	if bulletCounter < 5 {
 		bulletCounter += 1;
 	} else {

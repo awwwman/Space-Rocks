@@ -9,25 +9,25 @@ if faction == Factions.ALLY {
 	if other.faction == Factions.ENEMY {
 		switch (other.object_index) {
 			case obj_enemy_0:
-				score += 90;
+				score += 90 * obj_game.score_multiplier;
 				break;
 			case obj_enemy_1:
-				score += 70;
+				score += 70 * obj_game.score_multiplier;
 				break;
 			case obj_enemy_2:
-				score += 110;
+				score += 110 * obj_game.score_multiplier;
 				break;
 		}
 	} else {
 		switch (other.sprite_index) {
 			case spr_asteroid_big:
-				score += 50;
+				score += 50 * obj_game.score_multiplier;
 				break;
 			case spr_asteroid_med:
-				score += 30;
+				score += 30 * obj_game.score_multiplier;
 				break;
 			case spr_asteroid_sml:
-				score += 10;
+				score += 10 * obj_game.score_multiplier;
 				break;
 		}
 	}

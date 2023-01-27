@@ -2,6 +2,15 @@ switch(room) {
 	case rm_space:
 		draw_text(40, 20, "SCORE: " + string(score));
 		draw_text(40, 40, "LIVES: " + string(lives));
+		
+		draw_set_halign(fa_center);
+		var c = c_yellow;
+		draw_text_transformed_color(global.cameraWidth/2, 300, "TRIPLE BULLETS!", 1, 1, 0, c, c, c, c, min(1, alarm[0]/60));
+		draw_text_transformed_color(global.cameraWidth/2, 350, "DOUBLE POINTS!", 1, 1, 0, c, c, c, c, min(1, alarm[1]/60));
+		draw_text_transformed_color(global.cameraWidth/2, 400, "REFLECT!", 1, 1, 0, c, c, c, c, min(1, alarm[2]/60));
+		draw_text_transformed_color(global.cameraWidth/2, 450, "NUKE!", 1, 1, 0, c, c, c, c, min(1, alarm[3]/60));
+		draw_text_transformed_color(global.cameraWidth/2, 500, "EXTRA LIFE!", 1, 1, 0, c, c, c, c, min(1, alarm[4]/60));
+
 		break;
 	case rm_start:
 		draw_set_halign(fa_center);
