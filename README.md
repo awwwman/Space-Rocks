@@ -13,6 +13,8 @@
 ### mods
 - [x] completed camera mods
 - [x] completed parallax
+- [x] completed factions
+- [x] completed powerups
 
 ## what i did on my own:
 * i changed the sprites and took a different art direction from the tutorial
@@ -23,3 +25,5 @@
 * asteroids spawn on their own infinitely until the player runs out of ships
 * added a visual indicator to show that the player has been damaged 
 * lowered bullet range so the ship doesn't snipe asteroids outside of the screen
+* made custom enemies that are different from the tutorial's
+* made custom powerups that are different from the tutorial's
