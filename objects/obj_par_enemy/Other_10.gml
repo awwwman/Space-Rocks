@@ -3,6 +3,7 @@
 HP -= 1;
 if (HP <= 0) {
 	instance_destroy();
+	audio_play_sound(snd_die, 1, false, 1, 0, 0.7);
 } else {
 	audio_play_sound(snd_hurt, 1, false, 1, 0, 0.7);	
 }

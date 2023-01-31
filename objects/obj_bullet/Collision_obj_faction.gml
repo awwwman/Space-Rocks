@@ -1,9 +1,20 @@
 
 if (other.id == creator) exit;
-
-instance_destroy();
-
 if (other.faction == faction) exit;
+
+var reflected = obj_game.alarm[2] > 0;
+if faction != Factions.ALLY {
+	if !reflected {
+		instance_destroy();	
+	} else {
+		direction = point_direction(other.x, other.y, x, y);
+		creator = other.id;
+		faction = Factions.ALLY;
+	}
+} else {
+	reflected = false;
+	instance_destroy();	
+}
 
 if faction == Factions.ALLY {
 	if other.faction == Factions.ENEMY {
@@ -33,6 +44,9 @@ if faction == Factions.ALLY {
 	}
 }
 
+if (reflected && faction == Factions.ALLY) {
+	exit;
+}
 with(other) {
 	event_perform(ev_other, ev_user0);
 }
