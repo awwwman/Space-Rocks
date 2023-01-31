@@ -10,7 +10,3 @@ if inst != id {
 		direction = lerp(direction, new_angle, 0.05);	
 	}
 }
-
-if (HP <= 0) {
-	event_user(0);	
-}
